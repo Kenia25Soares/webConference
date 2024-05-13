@@ -1,2 +1,2 @@
 # webConference
-Aplicação para gerir uma Conferêrencia
+Aplicação para gerir uma Conferêrencia.
