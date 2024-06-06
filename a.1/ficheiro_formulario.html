@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+  <body>
+  <form id="myForm">
+    <input type="submit" value="login">
+  </form>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+      alert("o form não vai ser submetido!");
+      event.preventDefault()
+    });
+  </script>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <form id="frm" action="run.php">
+  Password: <input id="pass1" type="password" name="pass1"></br>
+  Confirmar password: <input id="pass2" type="password" name="pass2">
+    <input type="submit" value="submit">
+  </form>
+
+  <script>
+   let frm = document.getElementById("frm")
+    frm.addEventListener("submit", function(event) {
+      let pass1 = document.getElementById("pass1")
+      let pass2 = document.getElementById("pass2")
+      if (pass1.value != pass2.value) {
+        alert("Passwords têm de ser iguais")
+        event.preventDefault()
+      }
+    })
+  </script>
+</body>
+</html>

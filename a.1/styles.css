@@ -1,0 +1,23 @@
+
+/* CSS */
+#p1 {
+    background-color: #1f79ef;
+}
+
+#p2 {
+  color: #940091;
+}
+
+.center {
+  text-align: center;
+  color:red
+}
+
+/* CSS */
+.container {
+  color: red;
+  border:5px solid blue;
+}
+.inherit { color: inherit; border: inherit;}
+.initial { color: initial; border: initial;}
+.unset { color: unset; border: unset;}

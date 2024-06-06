@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de HTML e CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p id="p1">Olá, Mundo!</p>
+    <p id="p2">Olá, Portugal!</p>
+
+    <h1 class="center">Sou um h1</h1>
+    <p class="center">Sou um p</p>
+</body>
+</html>
+
+
+<!-- HTML-->
+<div class=" container">
+  <p> Texto part 1</p>
+  <p class="inherit"> Texto part 2</p>
+  <p class="initial"> Texto parte 3</p>
+  <p class="unset"> Texto parte 4</p>
+ </div>
+
+
+
+
+
+<div id="myDiv">
+  <p>Um parágrafo</p>
+  <p>Dois parágrafos</p>
+</div>
+<h4 id="result"></h4>
+<script>
+  let paragraphs = document.getElementById("myDiv").children
+  let numParagraphs = paragraphs.length
+  console.log(numParagraphs)
+  let txt = ""
+  for (let i = 0; i < numParagraphs; i++) {
+    if (i > 0) {
+      txt += "<br>";
+    }
+    console.log(paragraphs[i].innerHTML);
+    txt += paragraphs[i].innerHTML;
+  }
+  document.getElementById("result").innerHTML = `Parágrafos: ${txt}`
+</script>
+
+
+<p>Clique no botão para exibir a data e hora atual.</p>
+<p id="result"></p>
+<button onclick="displayDate()">Qual a data atual?</button>
+<script>
+  function displayDate() {
+    document.getElementById("result").innerHTML = new Date()
+  }
+</script>

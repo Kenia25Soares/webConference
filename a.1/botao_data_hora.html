@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir Data e Hora Atual</title>
+</head>
+<body>
+  <p>Clique no botão para exibir a data e hora atual.</p>
+  <p id="result"></p>
+  <button onclick="displayDate()">Qual a data atual?</button>
+  <script>
+    function displayDate() {
+      // Obtém a data e hora atual
+      const currentDate = new Date();
+      
+      // Formata a data e hora em uma string legível
+      const formattedDate = currentDate.toLocaleString();
+      
+      // Exibe a data e hora formatada no elemento com id "result"
+      document.getElementById("result").innerHTML = formattedDate;
+    }
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir Data e Hora Atual</title>
+</head>
+<body>
+  <p>Clique no botão para exibir a data e hora atual.</p>
+  <p id="result"></p>
+  <button onclick="displayDate()">Qual a data atual?</button>
+  <script>
+    function displayDate() {
+      // Obtém a data e hora atual
+      const currentDate = new Date();
+      
+      // Formata a data e hora em uma string legível
+      const formattedDate = currentDate.toLocaleString();
+      
+      // Exibe a data e hora formatada no elemento com id "result"
+      document.getElementById("result").innerHTML = formattedDate;
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir Data e Hora Atual</title>
+</head>
+<body>
+  <p>Clique no botão para exibir a data e hora atual.</p>
+  <p>Qual a data atual?</p>
+  <button onclick="displayDate()">Clique aqui</button>
+  <p id="result"></p>
+  <script>
+    function displayDate() {
+      // Obtém a data e hora atual
+      const currentDate = new Date();
+      
+      // Formata a data e hora em uma string legível
+      const formattedDate = currentDate.toLocaleString();
+      
+      // Exibe a data e hora formatada no elemento com id "result"
+      document.getElementById("result").innerHTML = formattedDate;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Exibir Data e Hora Atual</title>
+  <script>
+    window.onload = function() {
+      let result = document.getElementById("result");
+      let button = document.getElementById("myBtn");
+      button.onclick = function() {
+        result.innerHTML = new Date().toLocaleString();
+      }
+    }
+  </script>
+</head>
+<body>
+  <button id="myBtn">Qual a data atual?</button>
+  <p id="result"></p>
+</body>
+</html>
