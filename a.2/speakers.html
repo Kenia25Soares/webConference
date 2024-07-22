@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Oradores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+  <div class ="container-fluid">
+    <div class="jumbotron">
+      <h1 class="display-3">Oradores</h1>
+      <p class="lead">Gestão de oradores na WebConference</p>
+      <hr class="my-2">
+      <form id="frmSpeaker">
+        <!-- Formúlario de inserção/atualização de oradores -->
+        <div class="row" >
+          <div class="form-group col">
+            <label for="txtName">Nome</label>
+            <input id="txtName" type="text" placeholder="nome" class="form-control" required>
+          </div>
+          <div class="form-group col">
+            <label for="txtJob">Cargo</label>
+            <input id="txtJob" type="text" placeholder="cargo" class="form-control" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="txtPhoto">Foto</label>
+          <input id="txtPhoto" type="url" placeholder="link da foto" class="form-control" required>
+        </div>
+        <div class="row" >
+          <div class="form-group col">
+            <label for="txtFacebook">Facebook</label>
+            <input id="txtFacebook" type="text" placeholder="facebook" class="form-control">
+          </div>
+          <div class="form-group col">
+            <label for="txtTwitter">Twitter</label>
+            <input id="txtTwitter" type="text" placeholder="twitter" class="form-control">
+          </div>
+          <div class="form-group col">
+            <label for="txtLinkedin">Linkedin</label>
+            <input id="txtLinkedin" type="text" placeholder="linkedin" class="form-control">
+          </div>
+        </div>
+      
+        <div class="form-group">
+            <label for="txtBio">Bio</label>
+            <textarea id="txtBio" type="text" placeholder="biografia" class="form-control" cols="30" rows="5"></textarea>
+        </div>
+      
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <button type="submit" class="btn btn-primary mb-2">
+              Guardar Orador
+            </button>
+            <button type="reset" class="btn btn-primary mb-2">
+              Limpar valores
+            </button>
+          </div>
+        </div>  
+      </form>
+      <div id="divSpeakers" class="container">
+        <!-- Tabela de oradores -->
+      </div>
+    </div>
+  </div>  
+</body>
+<script src="js/speakers.js"></script>
+</html>

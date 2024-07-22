@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.9/sweetalert2.all.min.js"></script>
 </head>
@@ -24,14 +25,18 @@
             <a class="nav-link" href="#about">Sobre</a>
           </li>
           <li class="nav-item">
-         <a class="nav-link" href="#speakers">Speakers</a>
-         </li>
+            <a class="nav-link" href="#speakers">Speakers</a>
+            </li> 
          <li class="nav-item">
          </li>
          <a class="nav-link" href="#sponsors">Sponsors</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contacts">Contactos</a>
+        </li>
+
+        <li class="nav-item">
+          <a id="btnLogin" class="nav-link" href="#Área Privada">Área Privada</a>
         </li>
         </ul>
       </div>
@@ -83,12 +88,136 @@
       </div>
     </div>
   </section>
+
+  <div class="row">
+    <!-- Título e texto principal -->
+    <div class="col-lg-12 text-center">
+      <h2 class="section-heading text-uppercase">Oradores</h2>
+      <h3 class="section-subheading ">Especialistas internacionais do mundo da Web</h3>
+    </div>
+  </div>
   <div class="row text-center" id="renderSpeakers">
     <!-- Conteúdo a ser injetado via JavaScript -->
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="js/webconf.js"></script>
+
+  <div class="row">
+    <!-- Título e texto principal -->
+    <div class="col-lg-12 text-center mb-4">
+      <h2 class="section-heading text-uppercase">Sponsors</h2>
+    </div>
+  </div>
+  <div class="row" id="renderSponsors">    
+    <div class="col-md-3 col-ms-6">
+      <!-- Sponsor n. 1 -->
+    </div>
+    <div class="col-md-3 col-ms-6">
+      <!-- Sponsor n. 2 -->
+    </div>
+    <div class="col-md-3 col-ms-6">
+       <!-- Sponsor n. 3 -->
+    </div>
+    <div class="col-md-3 col-ms-6">
+       <!-- Sponsor n. 4 -->
+    </div>
+    <div class="col-md-3 col-ms-6">
+       <!-- Sponsor n. N -->
+    </div>
+  </div>
+
+  <div class="col-lg-12 text-center mt-4">
+    <h2 class="section-heading text-uppercase">Contactos</h2>
+    <h3 class="section-subheading "> Deixe-nos a sua sugestão/dúvida e nós rapidamente entraremos em contacto consigo!</h3>
+  </div>
+  <div class="row">
+    <div class="container">
+      <form id="contactForm" name="sendMessage">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- Campo nome -->
+             <div class="form-group">
+              <input
+              id="name"
+              class="form-control"
+              type="text"
+              placeholder="o seu nome" required>
+             </div>
+            <!-- Campo e-mail -->
+            <div class="form-group">
+              <input
+              id="email"
+              class="form-control"
+              type="text"
+              placeholder="o seu email" required>
+             </div>
+            <!-- Campo telemóvel -->
+            <div class="form-group">
+              <input
+              id="phone"
+              class="form-control"
+              type="text"
+              placeholder="o seu nº de telemóvel" required>
+             </div>
+          </div>
+          <div class="col-md-6">
+            <!-- Campo mensagem -->
+              <textarea id="message" class="form-control" id="message" rows="5"placeholder="a sua mensagem" ></textarea>
+
+          </div>
+          <div class="col-lg-12 text-center mb-4">
+            <!-- Botão de envio da mensagem -->
+            <div class="col-lg-12 text-center">
+              <button
+              id="sendMessageButton"
+              class="btn-primary btn-xl text-uppercase"
+              type="submit">
+              Enviar mensagem
+            </button>
+          </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="title" class="text-center">Meu Mapa Interativo com Leaflet</div>
+  <div class="container-fluid" id="googleMap">
+    <div class="row">
+    </div>
+  </div>
+  <footer>
+    <!-- Links para as redes sociais e copyright -->
+     <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Informação sobre copyright -->
+        </div>
+        <div class="col-md-6">
+          <!-- Ícones com links para as redes sociais -->
+        </div>
+      </div>
+     </div>
+  
+     <span class="copyright">
+      Copyright &copy; WebConference2024
+     </span>
+  
+     <ul class="list-inline social-buttons">
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li class="list-inline-item">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </li>
+     </ul>
+  </footer>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<script src="js/webconf.js"></script>
+<script src="js/map.js"></script>
 </html>
